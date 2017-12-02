@@ -48,20 +48,10 @@ int main() {
                 int val2 = std::stoi(val2_str, &sz);
                 idx2 += sz;
                 
-                // Don't test the value against itself
-                if (idx1 != idx2)
+                // Don't test the value against itself, check if the numbers are evenly divisible
+                if (idx1 != idx2 && val1 % val2 == 0)
                 {
-                    // Check if the numbers are evenly divisible
-                    if (val1 % val2 == 0 || val2 % val1 == 0)
-                    {
-                        if (val1 > val2)
-                        {
-                            sum += val1/val2;
-                        }
-                        else
-                        {
-                            sum += val2/val1;
-                        }
+                        sum += val1 / val2;
                         
                         // Kill the loops early and skip to next line
                         idx1 = line.length();
