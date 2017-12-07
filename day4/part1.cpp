@@ -1,7 +1,6 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <vector>
 #include <set>
 
 // Function to check if the passphrase is valid
