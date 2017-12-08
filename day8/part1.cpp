@@ -69,10 +69,6 @@ void interpret (std::string instruction) {
     } else {
         amt = 0;
     }
-    
-    if (registers[reg] > highest) {
-        highest = registers[reg];
-    }
 }
 
 int main() {
